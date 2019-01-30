@@ -88,10 +88,10 @@ button:active {
   display: inline-block;
   font-size: 24px;
   margin: 8px 4px;
-   z-index: 1;
-   border-radius: 100px;
+  z-index: 1;
+  border-radius: 100px;
 
-   		.disable-dbl-tap-zoom {
+  .disable-dbl-tap-zoom {
 	  touch-action: manipulation;
 	}
 }
