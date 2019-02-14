@@ -1,11 +1,44 @@
+/*
+//////////////////////////////////////NOTES TO SELF/////////////////////
+    
+    TO DO:
+        1. Application is not desktop-optimized. Priority #1
+            Solve: Add js to adjust size of canvas...get rid of footer
+
+        1b. Now that footer's gone, replace with Start/Select Button so that
+        the A/B/Arrow Buttons aren't at the bottom (ugly)
+
+        2. Convert houses into (html) elements of my resume.
+            a. About Me
+            b. Experience
+            c. Skills
+            *Change the Z axis of the html elements, but hide in certain "scenes"
+        3. Once desktop optimized, change so that no scrolling is permitted on the webpage
+            Solve: eh, just ask users to resize desktop nicely and get rid of useless buttons
+
+        4. Open in "module" size vs. full webpage size?
+        5. Allow for mouse to click on elements of game, but state that keyboard is optimal for desktop
+        6. 
+
+    
+
+
+//////////////////////////////////////////////////////////////////////////////
+*/
+
+//////////////////////check if desktop or mobile...if desktop, change the canvas size to avoid scrolling in fullscreen
+
+
 ///animation constants
         var canvasWidth = 600; 
         var canvasHeight = 500;
         
-        var spriteWidth = 90; 
         var spriteHeight = 60; 
+        var spriteWidth = 90; 
+
         //pokemon sprite: height:60, width:90
         //frankie sprite: height:150,width:225
+
         var rows = 2; 
         var cols = 3; 
         
@@ -36,13 +69,17 @@
         var speed = 10; 
         
         var canvas = document.getElementById('canvas');
+
         canvas.width = canvasWidth;
         canvas.height = canvasHeight; 
+
+
         
         var ctx = canvas.getContext("2d");
         
         var character = new Image(); 
         character.src = "sprites\\ash_du.png";
+                            //"ash_du.png" or frankie instead of ash
 
         var initialize = true;
 

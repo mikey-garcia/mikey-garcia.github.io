@@ -21,28 +21,14 @@ canvas{
     margin-left: auto;
     margin-right: auto;
     display: block;
- 	width:100%;
- 	height: auto;
+    width:100%;
+    height:auto;
+
  	.disable-dbl-tap-zoom {
 	  touch-action: manipulation;
 	}
 }
-footer {
-  margin-top: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border: 0;
-  border-radius: 1px;
-  margin-bottom: 0px;
-  font-size: 12px;
-  letter-spacing: 3px;  background-color: #FCFBE3;
-  color: black;
-  text-align: center;
 
-  .disable-dbl-tap-zoom {
-  touch-action: manipulation;
-  }
-}
 
 button{
 	background-color: white;
@@ -88,10 +74,10 @@ button:active {
   display: inline-block;
   font-size: 24px;
   margin: 8px 4px;
-  z-index: 1;
-  border-radius: 100px;
+   z-index: 1;
+   border-radius: 100px;
 
-  .disable-dbl-tap-zoom {
+   		.disable-dbl-tap-zoom {
 	  touch-action: manipulation;
 	}
 }
@@ -117,6 +103,12 @@ button:active {
 
 .container-fluid{
   .disable-dbl-tap-zoom {touch-action: manipulation;}
+}
+
+.container{
+
+ .disable-dbl-tap-zoom {touch-action: manipulation;}
+
 }
 
 span{
