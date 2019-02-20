@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <title>Miguel Garcia</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
 
-<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,7 +15,24 @@
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
+<script>
+  $(document).ready(function(){
+    var isTouchDevice = function() {  return 'ontouchstart' in window || 'onmsgesturechange' in window; };
+    var isDesktop = !isTouchDevice() ? true : false; //window.screenX != 0 && !isTouchDevice() ? true : false;
+      if(isDesktop){
+          document.getElementById("buttons").style.display = "none";
+          
+          document.getElementById('canvas').style.width = "70%";
+          document.getElementById('canvas').style.height = "auto";
+          window.onload = function(){
+           alert('Thank you for visiting my interactive resume!\nThis webpage is mobile optimized.\nHowever, you can still use the keyboard to move the character around (Arrow + A & B Keys)!');
+          }
+      }
+  });
+</script>
+
 <body class = "bg">
+
   <div style="background-color: #FCFBE3" class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="#" style="text-align: center;font-family: 'Permanent Marker', cursive; ">Interactive CV!</a>
@@ -52,7 +69,7 @@
       </div>
       </div>
   </div>
-    <script src = "ifDesktop.js"></script>
+
 </body>
 
 <script src = "noZoom.js"></script>
