@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
-<script>
+<!--script>
   $(document).ready(function(){
     var isTouchDevice = function() {  return 'ontouchstart' in window || 'onmsgesturechange' in window; };
     var isDesktop = !isTouchDevice() ? true : false; //window.screenX != 0 && !isTouchDevice() ? true : false;
@@ -25,15 +25,15 @@
           document.getElementById('canvas').style.width = "70%";
           document.getElementById('canvas').style.height = "auto";
           window.onload = function(){
-           alert('Thank you for visiting my interactive resume!\nThis webpage is mobile optimized.\nHowever, you can still use the keyboard to move the character around (Arrow + A & B Keys)!');
+           //alert('Thank you for visiting my interactive resume!\nThis webpage is mobile optimized.\nHowever, you can still use the keyboard to move the character around (Arrow + A & B Keys)!');
           }
       }
   });
-</script>
+</script-->
 
 <body class = "bg">
 
-  <div style="background-color: #FCFBE3" class="container">
+  <!--div style="background-color: #FCFBE3" class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="#" style="text-align: center;font-family: 'Permanent Marker', cursive; ">Interactive CV!</a>
         <div class="navbar-brand dropdown">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-  </div>
+  </div-->
 
   <div id="test" class="container">
     <canvas class="container" id='canvas'></canvas><br/>
@@ -58,14 +58,14 @@
       </div>
       <div class="col-xs-8">
       <div style="z-index:1003" class="container-fluid text-center">
-          <button ontouchstart="goUp()" ontouchend="setStill()" class="btn-lg"><i class="fa fa-arrow-up"></i></button>
+          <button ontouchstart="goUp()" ontouchend="setStill()" onmousedown="goUp()" onmouseup="setStill()" class="btn-lg"><i class="fa fa-arrow-up"></i></button>
       </div>
       <div style="z-index: 1002" class="container-fluid text-center">
-          <button ontouchstart="goLeft()" ontouchend="setStill()"class="btn-lg"><i class="fa fa-arrow-left"></i></button>
-          <button ontouchstart="goRight()" ontouchend="setStill()"class="btn-lg"><i class="fa fa-arrow-right"></i></button>
+          <button ontouchstart="goLeft()" ontouchend="setStill()" onmousedown="goLeft()" onmouseup="setStill()" class="btn-lg"><i class="fa fa-arrow-left"></i></button>
+          <button ontouchstart="goRight()" ontouchend="setStill()" onmousedown="goRight()" onmouseup="setStill()" class="btn-lg"><i class="fa fa-arrow-right"></i></button>
       </div>
       <div style="z-index: 1001" class="container-fluid text-center">
-          <button ontouchstart="goDown()" ontouchend="setStill()"class="btn-lg"><i class="fa fa-arrow-down"></i></button>
+          <button ontouchstart="goDown()" ontouchend="setStill()" onmousedown="goDown()" onmouseup="setStill()" class="btn-lg"><i class="fa fa-arrow-down"></i></button>
       </div>
       </div>
   </div>

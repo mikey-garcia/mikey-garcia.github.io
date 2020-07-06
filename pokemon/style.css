@@ -1,0 +1,130 @@
+body{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    		.disable-dbl-tap-zoom {
+	  touch-action: manipulation;
+	}
+
+}
+
+canvas{
+	border:1px solid #000000;
+	background-color: white;
+	padding-left: 0;
+    padding-right: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:100%;
+    height:auto;
+
+ 	.disable-dbl-tap-zoom {
+	  touch-action: manipulation;
+	}
+}
+
+
+button{
+	background-color: white;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    .disable-dbl-tap-zoom {
+	 touch-action: manipulation;
+	}
+}
+
+button:active {
+  transform: translateY(10px);
+  transform: translateZ(-4px);
+  .disable-dbl-tap-zoom {touch-action: manipulation;}
+}
+
+.btn-lg{
+	margin-left: 10px;
+	box-shadow: 0 0 5px black;
+}
+
+.btn-lg:active{
+	  box-shadow: 0 0 5px darkgray;
+}
+
+.bg{
+	background-image: url("textures\\grunge.jpg");
+}
+
+.bg-1{
+  border: none;
+  color: white;
+  background-color: DodgerBlue;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 8px 4px;
+   z-index: 1;
+   border-radius: 100px;
+
+   		.disable-dbl-tap-zoom {
+	  touch-action: manipulation;
+	}
+}
+.bg-2{
+  position: 5px;
+
+  border: none;
+  color: white;
+  background-color: DodgerBlue;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin-top: 8px;
+  margin-left: 50px;
+   z-index: 1;
+   border-radius: 100px;
+
+   		.disable-dbl-tap-zoom {
+	  touch-action: manipulation;
+	}
+}
+
+.container-fluid{
+  .disable-dbl-tap-zoom {touch-action: manipulation;}
+}
+
+.container{
+
+ .disable-dbl-tap-zoom {touch-action: manipulation;}
+
+}
+
+span{
+   display: inline-block;     
+   position: relative;    
+   z-index: 1;     
+   padding: 2em;     
+   margin: -2em; 
+    .disable-dbl-tap-zoom {
+	 touch-action: manipulation;}
+}
+
+span:active{
+  color:red;
+  transform: translateY(4px);
+      .disable-dbl-tap-zoom {
+	 touch-action: manipulation;}
+
+}
