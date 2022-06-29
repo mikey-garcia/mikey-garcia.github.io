@@ -1,0 +1,84 @@
+<body>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #coin {
+        position: relative;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        transition: transform 1s ease-in;
+        transform-style: preserve-3d;
+      }
+      .side {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+      .head {
+        z-index: 10;
+      }
+      .tail {
+        transform: rotateX(-180deg);
+      }
+  
+      .flipHead {
+        animation: resultHead 2s ease-out forwards;
+      }
+      .flipTail {
+        animation: resultTail 2s ease-out forwards;
+      }
+  
+      @keyframes resultHead {
+        from {
+          transform: rotateX(0);
+        }
+        to {
+          transform: rotateX(1800deg);
+        }
+      }
+  
+      @keyframes resultTail {
+        from {
+          transform: rotateX(0);
+        }
+        to {
+          transform: rotateX(1980deg);
+        }
+      }
+    </style>
+    <h1>i promise u this isnt rigged</h1>
+  
+    <div id="coin">
+      <div class="side head">
+        <div class="col-md-5 image-cropper">
+            <img class="pic" src="./img/heads.png"></img>
+        </div>
+      </div>
+
+      <div class="side tail">
+        <div class="col-md-5 image-cropper">
+            <img class="pic" src="./img/tails.png"></img>
+        </div>
+      </div>
+    </div>
+    <script>
+      let coin = document.getElementById("coin");
+  
+      coin.addEventListener("click", fnClick);
+  
+      function fnClick() {
+        var flipResult = Math.random();
+        if (flipResult < 0.5) {
+          coin.className = "flipHead";
+        } else {
+          coin.className = "flipTail";
+        }
+      }
+    </script>
+  </body>
+  
